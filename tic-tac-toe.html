@@ -27,11 +27,11 @@
 			if (currentSelection.innerHTML) {
 				window.alert("此位置無法選取！");
 			} else if (player == 1) {
-				currentSelection.innerHTML = 'X'; 
+				currentSelection.innerHTML = 'A'; 
 				player = 2; 
 				count++; 
 			} else if (player == 2) {
-				currentSelection.innerHTML = 'O'; 
+				currentSelection.innerHTML = 'B'; 
 				player = 1; 
 				count++;
 			}
@@ -58,21 +58,21 @@
 			}
 			
 			if (isLine == true) {			
-				if (currentSelection.innerHTML == "O") {
+				if (currentSelection.innerHTML == "A") {
 					setTimeout(() => { 
-						window.alert("O贏了！"); 
+						window.alert("A贏了！"); 
 						location.reload();
 					}, 300) ;					
 				}
-				else if (currentSelection.innerHTML == "X") {
+				else if (currentSelection.innerHTML == "B") {
 					setTimeout(() => { 
-						window.alert("X贏了！"); 
+						window.alert("B贏了！"); 
 						location.reload();
 					}, 300) ;		
 				}
 			} else if (count == 9) {
 				setTimeout(() => { 
-					window.alert("平手"); 
+					window.alert("DRAW"); 
 					location.reload();
 				}, 300) ;		
 			}			
